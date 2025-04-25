@@ -1,0 +1,151 @@
+.Veysel {
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+}
+
+footer {
+  color: #fff;
+}
+
+.Veysel:hover {
+  text-decoration: 1px underline;
+}
+
+/* Dark theme footer styles */
+.footer {
+  background-color: #363636;
+  color: #b3b3b3;
+  padding: 2rem 0;
+  border-top: 1px solid #222;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center; /* Center content horizontally */
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px; /* Control max width of the grid */
+  justify-content: center;
+  text-align: center; /* Center the text within each section */
+}
+
+.footer-links-section h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  display: inline-block; /* For centering the underline */
+}
+
+.footer-links-section h3::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 2px;
+  width: 40px;
+  transform: translateX(-50%); /* Center the line */
+  background: linear-gradient(90deg, #f1f1f1, #ffd900);
+}
+
+.footer-links-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-section li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links-section a {
+  color: #999;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links-section a:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #222;
+  color: #b3b3b3;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.social-icons a:hover {
+  background-color: #4169e1;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+.social-icons a:nth-child(2):hover {
+  background-color: #000;
+}
+.social-icons a:nth-child(3):hover {
+  background-color: #f60000;
+}
+.social-icons a:nth-child(4):hover {
+  background-color: #f64300;
+}
+
+.footer-credits {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.footer-credits a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-credits a:hover {
+  color: #ffd900;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links-section {
+    text-align: center;
+  }
+}

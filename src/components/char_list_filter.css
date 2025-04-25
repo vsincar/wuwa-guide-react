@@ -1,0 +1,262 @@
+.char-list-filter {
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid white;
+  box-sizing: border-box;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(236, 232, 232, 0.501);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 10;
+}
+
+.char-list-filter-title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-title {
+  padding: 0;
+  padding-bottom: 5px;
+  padding-right: 22px;
+  border-bottom: 3px solid #fff;
+  white-space: nowrap;
+}
+
+.char-list-filter-count {
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  white-space: nowrap;
+}
+
+.char-list-filter-sort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.char-list-filter-search {
+  position: relative;
+  flex-grow: 1;
+  min-width: 160px;
+}
+
+#clear-btn {
+  position: absolute;
+  display: block;
+  top: 10px;
+  right: 5px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.char-list-filter-input {
+  border: 2px solid #36373c;
+  background-color: #36373c;
+  color: #fff;
+  padding: 18px 6px;
+  width: 100%;
+  height: 18px;
+  box-sizing: border-box;
+}
+
+.char-list-filter-input:focus {
+  outline: none;
+  border: 2px solid #36373c;
+  background-color: #fff;
+  color: #36373c;
+}
+
+.char-list-filter-input:focus + #clear-btn {
+  display: none;
+}
+
+.filter-select-inputs {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+
+select {
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #36373c;
+  padding: 8px;
+  min-width: 80px;
+}
+
+select:focus {
+  outline: none;
+}
+
+.role-buttons {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.role-buttons button {
+  cursor: pointer;
+  background-color: #36373c;
+  color: #fff;
+  border: none;
+  white-space: nowrap;
+}
+
+#dps-btn {
+  border-bottom: 2px solid #ff0000;
+  color: #ff0000;
+  padding: 8px 12px;
+}
+
+#subdps-btn {
+  border-bottom: 2px solid #0084ff;
+  color: #0084ff;
+  padding: 8px 12px;
+}
+
+#support-btn {
+  border-bottom: 2px solid #f2ff00;
+  color: #f2ff00;
+  padding: 8px 12px;
+}
+
+#healer-btn {
+  border-bottom: 2px solid #2bff00;
+  color: #2bff00;
+  padding: 8px 12px;
+}
+.role-buttons button {
+  cursor: pointer;
+  background-color: #36373c;
+  color: #fff;
+  border: none;
+  white-space: nowrap;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.role-buttons button:hover {
+  transform: translateY(-2px);
+}
+
+.role-buttons button.active {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.role-buttons button.inactive {
+  opacity: 0.5;
+}
+
+#dps-btn {
+  border-bottom: 2px solid #ff0000;
+  color: #ff0000;
+  padding: 8px 12px;
+}
+
+#subdps-btn {
+  border-bottom: 2px solid #0084ff;
+  color: #0084ff;
+  padding: 8px 12px;
+}
+
+#support-btn {
+  border-bottom: 2px solid #f2ff00;
+  color: #f2ff00;
+  padding: 8px 12px;
+}
+
+#healer-btn {
+  border-bottom: 2px solid #2bff00;
+  color: #2bff00;
+  padding: 8px 12px;
+}
+@media (max-width: 768px) {
+  .char-list-filter-title {
+  }
+
+  .filter-title {
+    display: inline; /* veya inline-block */
+    padding: 0;
+    padding-right: 22px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #fff;
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  .char-list-filter-count {
+    display: inline;
+    float: right;
+    vertical-align: middle;
+    color: rgb(255, 255, 255);
+  }
+
+  .char-list-filter-sort {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-select-inputs {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  select {
+    flex-grow: 1;
+  }
+
+  .role-buttons {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .role-buttons button {
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .char-list-filter-title {
+    display: inline;
+  }
+
+  .char-list-filter-count {
+    font-size: 12px;
+  }
+
+  select {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .role-buttons button {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .char-list-filter-input {
+    padding: 14px 6px;
+    font-size: 12px;
+  }
+
+  #clear-btn {
+    top: 8px;
+  }
+}

@@ -1,0 +1,28 @@
+.char-list-container {
+  place-items: center; /* CSS Grid'de */
+  justify-content: center; /* Flexbox'ta */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+  padding: 20px;
+}
+
+@media (max-width: 1024px) {
+  .char-list-container {
+    grid-template-columns: repeat(3, 1fr); /* Tablet: 3 sütun */
+  }
+}
+
+@media (max-width: 768px) {
+  .char-list-container {
+    grid-template-columns: repeat(2, 1fr); /* Mobil: 2 sütun */
+    gap: 16px; /* İsteğe bağlı: Itemlar arası boşluk ekler */
+  }
+}
+
+/* Ekstra küçük mobil cihazlar için (isteğe bağlı) */
+@media (max-width: 440px) {
+  .char-list-container {
+    grid-template-columns: 1fr; /* Çok küçük ekranlarda 1 sütun */
+  }
+}

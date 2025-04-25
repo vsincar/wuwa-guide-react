@@ -1,0 +1,86 @@
+.chardetailcontainer {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  margin: 2rem auto;
+  text-align: center;
+  background-color: #363636;
+  border-radius: 16px;
+  color: white;
+  position: relative;
+}
+.chardetailbackButton {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 3;
+  background-color: #040404;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+
+  &:hover {
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+  }
+}
+
+.chardetailimgcontainer {
+  position: relative;
+}
+.chardetailelementIcon {
+  width: 50px;
+  position: absolute;
+  top: 10px;
+  right: 220px;
+  filter: brightness(0) invert(1);
+}
+.chardetailimage {
+  position: relative;
+
+  width: 100px;
+  border-radius: 12px;
+  margin-top: 2.5rem;
+}
+.chardetailname {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+.chardetailinfo {
+  margin-top: 1rem;
+  text-align: left;
+}
+.chardetailcontainer {
+  padding: 20px;
+  color: white;
+  min-height: 100vh;
+  transition: background 0.5s ease;
+}
+
+/* Elemente göre gradient arkaplanlar */
+.fusion-detail-page {
+  background: linear-gradient(to bottom, #e70202, #470000);
+}
+
+.electro-detail-page {
+  background: linear-gradient(to bottom, #d451ff, #4b006e);
+}
+
+.spectro-detail-page {
+  background: linear-gradient(to bottom, #fff700, #564e01);
+}
+
+.havoc-detail-page {
+  background: linear-gradient(to bottom, #f330a5, #640045);
+}
+
+.aero-detail-page {
+  background: linear-gradient(to bottom, #00ffbb, #005f49);
+}
+
+.glacio-detail-page {
+  background: linear-gradient(to bottom, #00c6ff, #002d45);
+}
