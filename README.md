@@ -4,7 +4,7 @@ A simple and interactive character listing application built with **React** and 
 
 ## 🚀 Live Demo
 
-🔗 [Live Demo on GitHub Pages](https://yourusername.github.io/react-vite-app)  
+🔗 [Live Demo on GitHub Pages](https://wuwa-guide.netlify.app/)  
 *(Replace with your actual GitHub username and repository name)*
 
 ---
