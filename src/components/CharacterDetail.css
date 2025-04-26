@@ -1,14 +1,20 @@
 .chardetailcontainer {
   padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
+
+  width: 100%;
+  max-width: 100%; /* Ekranı aşmayı önler */
+  box-sizing: border-box; /* Padding'i genişliğe dahil eder */
+
   margin: 2rem auto;
   text-align: center;
   background-color: #363636;
   border-radius: 16px;
   color: white;
   position: relative;
+  min-height: 100vh;
+  transition: background 0.5s ease;
 }
+
 .chardetailbackButton {
   position: absolute;
   left: 1rem;
@@ -21,16 +27,18 @@
   border-radius: 8px;
   cursor: pointer;
   font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
 
-  &:hover {
-    background-color: #f5f5f5;
-    color: #1a1a1a;
-  }
+.chardetailbackButton:hover {
+  background-color: #f5f5f5;
+  color: #1a1a1a;
 }
 
 .chardetailimgcontainer {
   position: relative;
 }
+
 .chardetailelementIcon {
   width: 50px;
   position: absolute;
@@ -38,26 +46,22 @@
   right: 220px;
   filter: brightness(0) invert(1);
 }
+
 .chardetailimage {
   position: relative;
-
   width: 100px;
   border-radius: 12px;
   margin-top: 2.5rem;
 }
+
 .chardetailname {
   font-size: 2rem;
   margin-top: 1rem;
 }
+
 .chardetailinfo {
   margin-top: 1rem;
   text-align: left;
-}
-.chardetailcontainer {
-  padding: 20px;
-  color: white;
-  min-height: 100vh;
-  transition: background 0.5s ease;
 }
 
 /* Elemente göre gradient arkaplanlar */
@@ -83,4 +87,72 @@
 
 .glacio-detail-page {
   background: linear-gradient(to bottom, #00c6ff, #002d45);
+}
+
+/* Responsive düzenlemeler */
+@media (max-width: 768px) {
+  .chardetailcontainer {
+    padding: 1.5rem;
+  }
+
+  .chardetailbackButton {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    left: 0.5rem;
+    top: 0.5rem;
+  }
+
+  .chardetailelementIcon {
+    width: 40px;
+    right: 150px;
+    top: 5px;
+  }
+
+  .chardetailimage {
+    width: 80px;
+    margin-top: 2rem;
+  }
+
+  .chardetailname {
+    font-size: 1.8rem;
+  }
+
+  .chardetailinfo {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .char-list-container {
+    padding: 0; /* Daha küçük padding */
+  }
+  .chardetailcontainer {
+    padding: 0; /* Daha dar iç boşluk */
+  }
+
+  .chardetailbackButton {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.75rem;
+    left: 0.5rem;
+    top: 0.5rem;
+  }
+
+  .chardetailelementIcon {
+    width: 30px;
+    right: 100px;
+    top: 5px;
+  }
+
+  .chardetailimage {
+    width: 70px;
+    margin-top: 1.5rem;
+  }
+
+  .chardetailname {
+    font-size: 1.6rem;
+  }
+
+  .chardetailinfo {
+    font-size: 0.9rem;
+  }
 }
